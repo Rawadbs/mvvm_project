@@ -5,7 +5,6 @@ import 'package:advance_flutter/presentation/main/pages/settings/settings_page.d
 
 import 'package:advance_flutter/presentation/resources/color_manager.dart';
 import 'package:advance_flutter/presentation/resources/strings_manager.dart';
-import 'package:advance_flutter/presentation/resources/values_manger.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -34,30 +33,27 @@ class _MainViewState extends State<MainView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorManager.white,
       body: pages[_currentIndex],
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(boxShadow: [
-          BoxShadow(color: ColorManager.lightGrey, spreadRadius: AppSize.s1)
-        ]),
-        child: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(
-                icon: const Icon(Icons.home_outlined),
-                label: AppStrings.home.tr()),
-            BottomNavigationBarItem(
-                icon: const Icon(Icons.search), label: AppStrings.search.tr()),
-            BottomNavigationBarItem(
-                icon: const Icon(Icons.notifications),
-                label: AppStrings.notifications.tr()),
-            BottomNavigationBarItem(
-                icon: const Icon(Icons.settings),
-                label: AppStrings.settings.tr()),
-          ],
-          selectedItemColor: ColorManager.primary,
-          unselectedItemColor: ColorManager.grey,
-          currentIndex: _currentIndex,
-          onTap: onTap,
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+              icon: const Icon(Icons.home_outlined),
+              label: AppStrings.home.tr()),
+          BottomNavigationBarItem(
+              icon: const Icon(Icons.search), label: AppStrings.search.tr()),
+          BottomNavigationBarItem(
+              icon: const Icon(Icons.notifications),
+              label: AppStrings.notifications.tr()),
+          BottomNavigationBarItem(
+              icon: const Icon(Icons.settings),
+              label: AppStrings.settings.tr()),
+        ],
+        selectedItemColor: ColorManager.primary,
+        unselectedItemColor: ColorManager.grey,
+        backgroundColor: ColorManager.white,
+        currentIndex: _currentIndex,
+        onTap: onTap,
       ),
     );
   }

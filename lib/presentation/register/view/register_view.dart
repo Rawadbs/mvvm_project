@@ -149,6 +149,8 @@ class _RegisterViewState extends State<RegisterView> {
                           favorite: const ['+966', '+20'],
                           showCountryOnly: true,
                           hideMainText: true,
+                          dialogTextStyle:
+                              Theme.of(context).textTheme.headlineLarge,
                           showOnlyCountryWhenClosed: true,
                         ),
                       ),
@@ -304,7 +306,7 @@ class _RegisterViewState extends State<RegisterView> {
                 leading: const Icon(
                   Icons.camera,
                 ),
-                title:  Text(AppStrings.photoGallery.tr()),
+                title: Text(AppStrings.photoGallery.tr()),
                 onTap: () {
                   _imageFromGallery();
                   Navigator.of(context).pop();
@@ -315,7 +317,7 @@ class _RegisterViewState extends State<RegisterView> {
                 leading: const Icon(
                   Icons.camera_alt_outlined,
                 ),
-                title:  Text(AppStrings.photoCamera.tr()),
+                title: Text(AppStrings.photoCamera.tr()),
                 onTap: () {
                   _imageFromCamera();
                   Navigator.of(context).pop();
@@ -345,8 +347,11 @@ class _RegisterViewState extends State<RegisterView> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-           Flexible(
-            child: Text(AppStrings.profilePicture.tr()),
+          Flexible(
+            child: Text(
+              AppStrings.profilePicture.tr(),
+              style: Theme.of(context).textTheme.headlineLarge,
+            ),
           ),
           Flexible(
               child: StreamBuilder<File>(

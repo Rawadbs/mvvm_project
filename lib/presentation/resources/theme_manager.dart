@@ -29,6 +29,7 @@ ThemeData getApplicationTheme() {
         color: ColorManager.white,
       ),
     ),
+    
 //button theme
     buttonTheme: ButtonThemeData(
         shape: const StadiumBorder(),

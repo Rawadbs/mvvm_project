@@ -45,7 +45,7 @@ class AppStrings {
   static const String contactsUs = "contacts_us";
   static const String inviteYourFriends = "invite_your_friends";
   static const String logout = "logout";
-  static const String signup = "signup ";
+  static const String signup = "signup";
   static const String newPlace = "newplace";
   static const String popurlarHotel = "popurlar_hotel";
   static const String exploreTheWorld = "explore_the_world";
